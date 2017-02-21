@@ -1,0 +1,160 @@
+<?php
+
+if( ($stmt3->rowCount() > 0) && ($stmt4->rowCount() > 0)){
+
+?>
+    <table>
+        <tr>
+
+            <td valign="top">
+                <!--<a href="<?php //echo MAIN_URL;?>/charts_weekly_statewise.php?date=<?php // echo $date_for_web; ?>&category=Country&source=mail&customer_id=<?php //echo $logininfo["customer_id"];?>">Click to view on web</a><br>-->
+
+                <!--a href="<?php echo MAIN_URL;?>/charts_weekly.php?date=<?php echo $date_for_web; ?>&category=Country-City&source=mail&customer_id=<?php echo $logininfo["customer_id"];?>">Click to view on web</a><br!-->
+
+                <img src="reports/<?php echo $fileName3; ?>" />
+            </td>
+            <td valign="top" style="padding-top:20px;padding-left:20px">
+
+                <table cellpadding="5" style="border:1px solid black;border-collapse:collapse;">
+                    <thead>
+                        <th style='border:1px solid black;'>Channel</th>
+                        <th style='border:1px solid black;'>Hits</th>
+                    </thead>
+                    <?php				
+    			//foreach($country_code_city_display_array_hits as $value){
+			foreach($X[2] as $key=>$value){
+						echo "<tr><td style='border:1px solid black;'>".$key."</td><td style='border:1px solid black;'>".$value."";
+						
+						//echo "</td><td style='border:1px solid black;'>".$value['clicks']."</td></tr>";
+						
+					}
+    			?>
+                </table>
+
+            </td>
+            <td>
+
+                <table cellpadding="5" style="border:1px solid black;border-collapse:collapse;">
+                    <thead>
+                        <tr>
+                            <th style='border:1px solid black;'>Country (Channel)</th>
+                            <th style='border:1px solid black;'>Hits</th>
+                            <th style='border:1px solid black;'>Duration</th>
+                        </tr>
+                    </thead>
+
+                    <?php				
+    			//foreach($country_code_city_display_array_hits as $value){
+			/* foreach($X[2] as $key=>$value){
+						echo "<tr><td style='border:1px solid black;'>".$key."</td><td style='border:1px solid black;'>".$value."";
+						
+						//echo "</td><td style='border:1px solid black;'>".$value['clicks']."</td></tr>";
+						
+					}*/
+
+
+			foreach($A[2] as $key => $value)
+			{
+
+				$tot_dur=($value[1] / 60);
+				$tot_dur=round($tot_dur, 2, PHP_ROUND_HALF_DOWN);
+				//echo "<span><span> - </span></span>";
+				//echo "<tr style='border:1px solid black'><td style='border:1px solid black;'><strong>".$key."</strong></td><td style='border:1px solid black;'><strong>".$value[0]."</strong></td><td style='border:1px solid black;'><strong>".minutesToTime($tot_dur)."</strong></td></tr>";
+				echo "<tr style='border:1px solid black'><td style='border:1px solid black;'><strong>".$key."</strong></td><td style='border:1px solid black;'><strong>".$value[0]."</strong></td><td style='border:1px solid black;'><strong>".minutesToHours($tot_dur)."</strong></td></tr>";
+				foreach($A[1] as $fin)	
+				{ if($fin['country']==$key)
+					{			
+				
+					echo "<tr><td style='border:1px solid black;'>".$fin['channel']."</td><td style='border:1px solid black;'>";
+				$dur = ($fin['dur'] / 60);
+				$dur=round($dur, 2, PHP_ROUND_HALF_DOWN);
+						//echo $fin['hits']."</td><td style='border:1px solid black;'>".minutesToTime($dur)."</td></tr>";
+						echo $fin['hits']."</td><td style='border:1px solid black;'>".minutesToHours($dur)."</td></tr>";
+					}
+					}
+				//echo "</tr>";
+			}
+    			?>
+
+
+                </table>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan='2' height="50px">
+                <td>
+        </tr>
+        <tr>
+
+            <td valign="top">
+                <!--<a href="<?php //echo MAIN_URL;?>/charts_weekly_statewise.php?date=<?php // echo $date_for_web; ?>&category=Country&source=mail&customer_id=<?php //echo $logininfo["customer_id"];?>">Click to view on web</a><br>-->
+
+                <!--a href="<?php echo MAIN_URL;?>/charts_weekly.php?date=<?php echo $date_for_web; ?>&category=Country-City&source=mail&customer_id=<?php echo $logininfo["customer_id"];?>">Click to view on web</a><br!-->
+
+                <img src="reports/<?php echo $fileName4; ?>" />
+            </td>
+            <td valign="top" style="padding-top:20px;padding-left:20px">
+
+                <table cellpadding="5" style="border:1px solid black;border-collapse:collapse;">
+                    <thead>
+                        <th style='border:1px solid black;'>Channel</th>
+                        <th style='border:1px solid black;'>Duration</th>
+                    </thead>
+                    <?php				
+    			//foreach($country_code_city_display_array_duration as $value){
+			foreach($Y[2] as $key=>$value){
+						//echo "<tr><td style='border:1px solid black;'>".$key."</td><td style='border:1px solid black;'>".minutesToTime($value)."";
+						echo "<tr><td style='border:1px solid black;'>".$key."</td><td style='border:1px solid black;'>".minutesToHours($value)."";
+						
+						//echo "</td><td style='border:1px solid black;'>".minutesToTime($value['duration'])."</td></tr>";
+						
+					}
+    			?>
+                </table>
+
+            </td>
+        </tr>
+
+    </table>
+    <!-- table cellpadding="5" style="border:1px solid black;border-collapse:collapse;">
+        <thead><tr><th style='border:1px solid black;'>Country (Channel)</th><th style='border:1px solid black;'>Hits</th><th style='border:1px solid black;'>Duration(in min)</th></tr></thead>
+          
+    			<?php				
+    			//foreach($country_code_city_display_array_hits as $value){
+			/* foreach($X[2] as $key=>$value){
+						echo "<tr><td style='border:1px solid black;'>".$key."</td><td style='border:1px solid black;'>".$value."";
+						
+						//echo "</td><td style='border:1px solid black;'>".$value['clicks']."</td></tr>";
+						
+					}*/
+
+
+			foreach($A[2] as $key => $value)
+			{
+
+				$tot_dur=($value[1] / 60);
+				$tot_dur=round($tot_dur, 2, PHP_ROUND_HALF_DOWN);
+				//echo "<span><span> - </span></span>";
+				echo "<tr style='border:1px solid black'><td style='border:1px solid black;'><strong>".$key."</strong></td><td style='border:1px solid black;'><strong>".$value[0]."</strong></td><td style='border:1px solid black;'><strong>".$tot_dur."</strong></td></tr>";
+				foreach($A[1] as $fin)	
+				{ if($fin['country']==$key)
+					{			
+				
+					echo "<tr><td style='border:1px solid black;'>".$fin['channel']."</td><td style='border:1px solid black;'>";
+				$dur = ($fin['dur'] / 60);
+				$dur=round($dur, 2, PHP_ROUND_HALF_DOWN);
+    					echo $fin['hits']."</td><td style='border:1px solid black;'>".$dur."</td></tr>";
+					}
+					}
+				//echo "</tr>";
+			}
+    			?>
+        
+     
+</table -->
+    <?php
+}else{
+	echo "No Reports for the last day.";
+}
+?>

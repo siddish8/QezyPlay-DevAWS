@@ -1,0 +1,6 @@
+[26-Jan-2017 09:32:50 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/qezyplay/public_html/wp-content/themes/truemag/index.php on line 3
+[26-Jan-2017 09:34:15 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/qezyplay/public_html/wp-content/themes/truemag/index.php on line 3
+[26-Jan-2017 09:38:30 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/qezyplay/public_html/wp-content/themes/truemag/index.php on line 3
+[26-Jan-2017 09:45:20 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/qezyplay/public_html/wp-content/themes/truemag/index.php on line 3
+[26-Jan-2017 09:46:03 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/qezyplay/public_html/wp-content/themes/truemag/index.php on line 3
+[26-Jan-2017 09:46:37 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/qezyplay/public_html/wp-content/themes/truemag/index.php on line 3

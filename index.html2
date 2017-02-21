@@ -1,0 +1,44 @@
+<!doctype html>
+<title>Site Maintenance</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+        text-align: center;
+        padding: 150px;
+    }
+    
+    h1 {
+        font-size: 50px;
+    }
+    
+    body {
+        font: 20px Helvetica, sans-serif;
+        color: #333;
+    }
+    
+    article {
+        display: block;
+        text-align: left;
+        width: 650px;
+        margin: 0 auto;
+    }
+    
+    a {
+        color: #dc8100;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: darkgreen;
+        text-decoration: none;
+    }
+</style>
+
+<article>
+    <h1>We&rsquo;ll be LIVE s<i class="fa fa-play-circle" aria-hidden="true"></i><i class="fa fa-play-circle" aria-hidden="true"></i>n </h1>
+    <div>
+        <p>Sorry for the inconvenience, we&rsquo;re performing some maintenance at the moment. You can always <a href="mailto:admin@qezyplay.com?cc=siddish.gollapelli@ideabytes.com&amp;subject=QezyPlay%20Contact%20Us&amp;">
+contact us</a>, we&rsquo;ll be back online shortly!<br><br>Thanks for understanding.</p>
+        <p>&mdash; QezyPlay Team</p>
+    </div>
+</article>

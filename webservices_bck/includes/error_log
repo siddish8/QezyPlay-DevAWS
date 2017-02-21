@@ -1,0 +1,4 @@
+[06-Feb-2017 07:36:00 UTC] PHP Warning:  require_once(classes/dbconfig.class.php): failed to open stream: No such file or directory in /home/qezyplay/public_html/webservices/includes/header.inc.php on line 22
+[06-Feb-2017 07:36:00 UTC] PHP Fatal error:  require_once(): Failed opening required 'classes/dbconfig.class.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/qezyplay/public_html/webservices/includes/header.inc.php on line 22
+[06-Feb-2017 07:36:37 UTC] PHP Warning:  require_once(classes/dbconfig.class.php): failed to open stream: No such file or directory in /home/qezyplay/public_html/webservices/includes/header.inc.php on line 22
+[06-Feb-2017 07:36:37 UTC] PHP Fatal error:  require_once(): Failed opening required 'classes/dbconfig.class.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/qezyplay/public_html/webservices/includes/header.inc.php on line 22
